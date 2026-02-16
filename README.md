@@ -75,7 +75,21 @@ npm run preview
 
 ## Deployment
 
-The app is configured for GitHub Pages deployment. Push to the main branch to trigger automatic deployment via GitHub Actions.
+The app is configured for automatic GitHub Pages deployment.
+
+### Quick Deploy
+
+1. **Merge to main branch** to trigger automatic deployment
+2. **Enable GitHub Pages** in repository Settings → Pages → Source: "GitHub Actions"
+3. **Access the app** at: `https://dopaton.github.io/tribal-wars-tma/`
+
+For detailed deployment instructions, see [DEPLOYMENT.md](./DEPLOYMENT.md).
+
+### Live Demo
+
+🌐 **Live App**: https://dopaton.github.io/tribal-wars-tma/
+
+*Note: You may need to enable GitHub Pages in repository settings first.*
 
 ## Project Structure
 
