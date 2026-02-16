@@ -1,0 +1,109 @@
+.barracks-page {
+  padding-bottom: 20px;
+}
+
+.training-queue {
+  background: var(--tg-theme-secondary-bg-color);
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.queue-current {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+.queue-pending {
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--tg-theme-hint-color);
+}
+
+.current-units {
+  margin-bottom: 24px;
+}
+
+.units-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.unit-count {
+  background: var(--tg-theme-secondary-bg-color);
+  padding: 12px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.unit-name {
+  font-size: 14px;
+  color: var(--tg-theme-text-color);
+}
+
+.unit-number {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--tg-theme-button-color);
+}
+
+.train-section {
+  margin-top: 24px;
+}
+
+.unit-card {
+  margin-bottom: 16px;
+}
+
+.unit-header {
+  margin-bottom: 8px;
+}
+
+.unit-stats {
+  font-size: 13px;
+  color: var(--tg-theme-hint-color);
+  margin-top: 4px;
+}
+
+.unit-costs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin: 12px 0;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 8px;
+}
+
+.train-controls {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.train-input {
+  width: 80px;
+  padding: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  font-size: 15px;
+  background: white;
+  color: var(--tg-theme-text-color);
+}
+
+.train-controls .button {
+  flex: 1;
+}
+
+@media (max-width: 375px) {
+  .unit-costs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

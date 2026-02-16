@@ -1,0 +1,55 @@
+.map-page {
+  padding-bottom: 20px;
+}
+
+.map-container {
+  background: var(--tg-theme-secondary-bg-color);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.map-canvas {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  cursor: grab;
+  touch-action: none;
+}
+
+.map-canvas:active {
+  cursor: grabbing;
+}
+
+.village-info {
+  background: var(--tg-theme-secondary-bg-color);
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.info-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: var(--tg-theme-text-color);
+}
+
+.info-details {
+  font-size: 14px;
+  color: var(--tg-theme-hint-color);
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.map-hint {
+  text-align: center;
+  font-size: 13px;
+  color: var(--tg-theme-hint-color);
+  padding: 12px;
+  background: var(--tg-theme-secondary-bg-color);
+  border-radius: 8px;
+}

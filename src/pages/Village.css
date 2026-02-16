@@ -1,0 +1,47 @@
+.village-page {
+  padding-bottom: 20px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--tg-theme-text-color);
+}
+
+.buildings-section {
+  margin-top: 24px;
+}
+
+.buildings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.building-card {
+  background: var(--tg-theme-secondary-bg-color);
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.building-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.building-level {
+  font-size: 14px;
+  color: var(--tg-theme-hint-color);
+  margin-top: 4px;
+}
+
+.building-effect {
+  font-size: 13px;
+  color: var(--tg-theme-link-color);
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}

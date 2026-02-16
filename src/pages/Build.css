@@ -1,0 +1,48 @@
+.build-page {
+  padding-bottom: 20px;
+}
+
+.page-subtitle {
+  font-size: 14px;
+  color: var(--tg-theme-hint-color);
+  margin-top: 4px;
+}
+
+.build-card {
+  margin-bottom: 16px;
+}
+
+.build-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.build-level {
+  font-size: 14px;
+  color: var(--tg-theme-hint-color);
+  margin-top: 4px;
+}
+
+.build-costs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin: 12px 0;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 8px;
+}
+
+.cost-item {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--tg-theme-text-color);
+}
+
+@media (max-width: 375px) {
+  .build-costs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

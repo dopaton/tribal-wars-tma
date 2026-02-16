@@ -1,0 +1,133 @@
+.rally-page {
+  padding-bottom: 20px;
+}
+
+.attacks-section {
+  margin-bottom: 24px;
+}
+
+.attack-card {
+  margin-bottom: 12px;
+}
+
+.attack-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.attack-target {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--tg-theme-text-color);
+}
+
+.attack-units {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.unit-tag {
+  font-size: 12px;
+  padding: 4px 8px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  color: var(--tg-theme-text-color);
+}
+
+.launch-section {
+  margin-top: 24px;
+}
+
+.target-info {
+  margin-bottom: 20px;
+}
+
+.target-coords {
+  font-size: 14px;
+  color: var(--tg-theme-hint-color);
+  margin-top: 4px;
+}
+
+.no-target {
+  background: var(--tg-theme-secondary-bg-color);
+  padding: 24px;
+  border-radius: 12px;
+  text-align: center;
+  color: var(--tg-theme-hint-color);
+  margin-bottom: 20px;
+}
+
+.select-units {
+  margin-bottom: 20px;
+}
+
+.subsection-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--tg-theme-text-color);
+}
+
+.unit-selector {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: var(--tg-theme-secondary-bg-color);
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+.unit-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.unit-name {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--tg-theme-text-color);
+  margin-bottom: 2px;
+}
+
+.unit-available {
+  font-size: 13px;
+  color: var(--tg-theme-hint-color);
+}
+
+.unit-input {
+  width: 80px;
+  padding: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  font-size: 15px;
+  background: white;
+  color: var(--tg-theme-text-color);
+}
+
+.attack-summary {
+  background: var(--tg-theme-secondary-bg-color);
+  padding: 16px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  padding: 4px 0;
+}
+
+.summary-value {
+  font-weight: 600;
+  color: var(--tg-theme-button-color);
+}
+
+.launch-button {
+  font-size: 16px;
+  padding: 16px;
+}
