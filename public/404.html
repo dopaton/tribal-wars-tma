@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tribal Wars - TMA</title>
+  <script>
+    // GitHub Pages SPA redirect workaround
+    // This script takes the current URL and redirects to the base URL with the path as a query parameter
+    // The index.html will then use this to navigate to the correct route
+    (function() {
+      var path = window.location.pathname.replace('/tribal-wars-tma', '');
+      var query = window.location.search;
+      
+      // If we're not at the root, redirect to index.html with the path preserved
+      if (path && path !== '/' && path !== '/index.html') {
+        window.location.replace(
+          '/tribal-wars-tma/' + 
+          '?p=' + encodeURIComponent(path) + 
+          (query ? '&' + query.slice(1) : '')
+        );
+      }
+    })();
+  </script>
+</head>
+<body>
+  <div style="text-align: center; padding: 50px; font-family: Arial, sans-serif;">
+    <h1>⚔️ Tribal Wars</h1>
+    <p>Redirecting...</p>
+  </div>
+</body>
+</html>

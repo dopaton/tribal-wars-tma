@@ -36,6 +36,15 @@ Automated deployment is configured in `.github/workflows/deploy.yml`:
 
 A `.nojekyll` file in the `public/` directory prevents GitHub Pages from processing the site with Jekyll, ensuring proper asset loading.
 
+### 4. SPA Routing Fix
+
+Since this is a Single Page Application (SPA) with client-side routing, GitHub Pages needs special handling to support direct navigation to routes:
+
+- **`public/404.html`**: Catches 404 errors and redirects to index.html with the path as a query parameter
+- **`index.html`**: Contains a script that reads the query parameter and uses `history.replaceState` to restore the correct route
+
+This allows users to directly access routes like `/tribal-wars-tma/village` or refresh the page without getting a 404 error.
+
 ## Deployment Steps
 
 ### Automatic Deployment (Recommended)
