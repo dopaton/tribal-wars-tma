@@ -1,5 +1,6 @@
-import { useBuildingStore } from '../stores/buildingStore';
+import { useState, useEffect } from 'react';
 import { useResourceStore } from '../stores/resourceStore';
+import { useBuildingStore } from '../stores/buildingStore';
 import { formatResources, formatTime } from '../utils/game';
 import './Build.css';
 
@@ -8,6 +9,14 @@ function Build() {
   const startUpgrade = useBuildingStore((state) => state.startUpgrade);
   const subtractResources = useResourceStore((state) => state.subtractResources);
   const canAfford = useResourceStore((state) => state.canAfford);
+  const [currentTime, setCurrentTime] = useState(() => Date.now());
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTime(Date.now());
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   const handleUpgrade = (buildingId: string) => {
     const building = buildings[buildingId];
@@ -24,9 +33,9 @@ function Build() {
     }
   };
 
-  const getRemainingTime = (building: any) => {
+  const getRemainingTime = (building: { upgrading: boolean; upgradeEndTime?: number }) => {
     if (!building.upgrading || !building.upgradeEndTime) return 0;
-    const remaining = Math.max(0, building.upgradeEndTime - Date.now());
+    const remaining = Math.max(0, building.upgradeEndTime - currentTime);
     return Math.floor(remaining / 1000);
   };
 

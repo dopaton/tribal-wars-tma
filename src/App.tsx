@@ -15,7 +15,8 @@ import GameLoop from './components/GameLoop';
 function App() {
   useEffect(() => {
     // Apply Telegram theme colors
-    const tg = (window as any).Telegram?.WebApp;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const tg = (window as { Telegram?: { WebApp?: any } }).Telegram?.WebApp;
     if (tg) {
       tg.ready();
       tg.expand();

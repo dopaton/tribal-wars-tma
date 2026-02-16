@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useUnitStore } from '../stores/unitStore';
 import { useResourceStore } from '../stores/resourceStore';
 import { UNITS } from '../utils/constants';
@@ -13,6 +13,14 @@ function Barracks() {
   const canAfford = useResourceStore((state) => state.canAfford);
   
   const [trainAmount, setTrainAmount] = useState<Record<string, number>>({});
+  const [currentTime, setCurrentTime] = useState(() => Date.now());
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTime(Date.now());
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   const handleTrain = (unitId: string) => {
     const amount = trainAmount[unitId] || 1;
@@ -35,9 +43,8 @@ function Barracks() {
 
   const getQueueRemaining = () => {
     if (trainingQueue.length === 0) return 0;
-    const now = Date.now();
     const currentItem = trainingQueue[0];
-    return Math.max(0, Math.floor((currentItem.endTime - now) / 1000));
+    return Math.max(0, Math.floor((currentItem.endTime - currentTime) / 1000));
   };
 
   return (

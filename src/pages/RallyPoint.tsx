@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useMapStore } from '../stores/mapStore';
 import { useUnitStore } from '../stores/unitStore';
 import { useAttackStore } from '../stores/attackStore';
@@ -13,6 +13,14 @@ function RallyPoint() {
   const launchAttack = useAttackStore((state) => state.launchAttack);
   
   const [attackUnits, setAttackUnits] = useState<Record<string, number>>({});
+  const [currentTime, setCurrentTime] = useState(() => Date.now());
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTime(Date.now());
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   const handleUnitChange = (unitId: string, value: number) => {
     const maxUnits = units[unitId] || 0;
@@ -34,9 +42,8 @@ function RallyPoint() {
     return Object.values(attackUnits).reduce((sum, count) => sum + count, 0);
   };
 
-  const getAttackRemaining = (attack: any) => {
-    const now = Date.now();
-    const remaining = Math.max(0, attack.arrivalTime - now);
+  const getAttackRemaining = (attack: { arrivalTime: number }) => {
+    const remaining = Math.max(0, attack.arrivalTime - currentTime);
     return Math.floor(remaining / 1000);
   };
 
